@@ -34,7 +34,9 @@ public class HospitalBedsController {
 	 */
 	@RequestMapping("/getHospitalBeds")
 	public List<HospitalBedsData> getHospitalBedsData() {
-		return null;
+		//System.out.println("@@@@@@@@@@@@@@@@@@@@");
+		//System.out.print( fileReadingService.readAllBedsData());
+		return fileReadingService.readAllBedsData();
 	}
 
 	/**
@@ -44,7 +46,8 @@ public class HospitalBedsController {
 	@RequestMapping("/getBedsForLocation")
 	public Integer getBedsForLocation(@RequestParam(required = true) String location,
 			@RequestParam(required = true) String bedType) {
-		return null;
+		return fileReadingService.getTotalBedsForLocation(location, bedType);
+		//return 2;
 	}
 
 }
