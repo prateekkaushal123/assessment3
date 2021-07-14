@@ -45,7 +45,7 @@ pipeline {
                     steps {
                 
                         // Run Maven on a Unix agent.
-                        bat "docker run testjenkins2"
+                        bat "docker run testjenkins2 -p 8080:8080"
 
                             }
                 }
