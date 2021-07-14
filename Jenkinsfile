@@ -17,8 +17,8 @@ pipeline {
                             steps {
                         
 
-                                sh "git clone https://github.com/prateekkaushal123/assessment3.git"
-                               // git 'https://tools.publicis.sapient.com/bitbucket/scm/psba/training.git'
+
+                                git 'https://github.com/prateekkaushal123/assessment3.git'
 
                                 // Run Maven on a Unix agent.
                                 sh "mvn -Dmaven.test.failure.ignore=true clean install"
