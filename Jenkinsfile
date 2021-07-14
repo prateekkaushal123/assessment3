@@ -34,7 +34,7 @@ pipeline {
                 
 
                         // Run Maven on a Unix agent.
-                        bat "docker image build -t testjenkins2 ."
+                        bat "docker image build -t testjenkins ."
 
                     }
 
@@ -45,7 +45,7 @@ pipeline {
                     steps {
                 
                         // Run Maven on a Unix agent.
-                        bat "docker run testjenkins2 -p 8080:8080"
+                        bat "docker run --name HospitalApp -p 8080:8080  testjenkins"
 
                             }
                 }
