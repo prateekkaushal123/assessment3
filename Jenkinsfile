@@ -21,7 +21,7 @@ pipeline {
                                 git 'https://github.com/prateekkaushal123/assessment3.git'
 
                                 // Run Maven on a Unix agent.
-                                sh "mvn -Dmaven.test.failure.ignore=true clean install"
+                                bat "mvn -Dmaven.test.failure.ignore=true clean install"
 
                                 }
 
@@ -34,7 +34,7 @@ pipeline {
                 
 
                         // Run Maven on a Unix agent.
-                        sh "docker image build -t testjenkins2 ."
+                        bat "docker image build -t testjenkins2 ."
 
                     }
 
@@ -45,7 +45,7 @@ pipeline {
                     steps {
                 
                         // Run Maven on a Unix agent.
-                        sh "docker run testjenkins2"
+                        bat "docker run testjenkins2"
 
                             }
                 }
